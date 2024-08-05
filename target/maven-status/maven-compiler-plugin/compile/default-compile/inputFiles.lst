@@ -1,4 +1,10 @@
 D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\servlets\SVUsuarios.java
+D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\persistencia\exceptions\IllegalOrphanException.java
 D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\logica\Usuario.java
+D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\persistencia\exceptions\NonexistentEntityException.java
+D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\persistencia\ControladoraP.java
+D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\persistencia\UsuarioJpaController.java
 D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\com\mycompany\paginaweb\JakartaRestConfiguration.java
+D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\logica\ControladoraL.java
 D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\com\mycompany\paginaweb\resources\JakartaEE8Resource.java
+D:\Documentos\NetBeansProjects\PaginaWeb\src\main\java\persistencia\exceptions\PreexistingEntityException.java

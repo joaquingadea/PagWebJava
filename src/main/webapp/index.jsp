@@ -15,13 +15,15 @@
         <form action="SVUsuarios" method = "POST">
             
             <label>Nombre: </label><input type="text" name="nombre">
+            <label>Apellido: </label><input type="text" name="apellido">
+            <label>Edad: </label><input type="text" name="edad">
             <button type="submit">Enviar</button>
         </form>
         
         
         <h3>Haga click en el siguiente boton para ver los usuarios</h3>
         <form action="SVUsuarios" method="GET">
-            <button>Mostrar usuarios</button>
+            <button type="submit">Mostrar usuarios</button>
         </form>  
     </body>
 </html>

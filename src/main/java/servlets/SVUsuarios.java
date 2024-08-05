@@ -10,11 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import logica.ControladoraL;
 import logica.Usuario;
 
 @WebServlet(name = "SVUsuarios", urlPatterns = {"/SVUsuarios"})
 public class SVUsuarios extends HttpServlet {
-
+ControladoraL control = new ControladoraL();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     }
@@ -24,18 +25,10 @@ public class SVUsuarios extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        //BASES DE DATOS LOGICA
-        Usuario u = new Usuario("Julio","Gutierrez",13);
-        Usuario u1 = new Usuario("Michael","Jackson",40);
-        Usuario u2 = new Usuario("Bruno","Diaz",31);
+        //BASES DE DATOS 
+        List<Usuario> listaUsuarios = new ArrayList();
+        listaUsuarios = control.traerUsuarios();
         
-        List<Usuario> listaUsuarios = new ArrayList<>();
-        listaUsuarios.add(u);
-        listaUsuarios.add(u1);
-        listaUsuarios.add(u2);
-        //--------------------------
-        
-        //entender que pasa aca
         
         HttpSession misesion = request.getSession();
         misesion.setAttribute("listaUsuarios",listaUsuarios);
@@ -49,9 +42,17 @@ public class SVUsuarios extends HttpServlet {
         processRequest(request, response);
         
         String nombre = request.getParameter("nombre");
-        System.out.println(nombre);
+        String apellido = request.getParameter("apellido");
+        int edad = Integer.parseInt(request.getParameter("edad"));
         
+        Usuario usuAlta = new Usuario();
+        usuAlta.setNombre(nombre);
+        usuAlta.setApellido(apellido);
+        usuAlta.setEdad(edad);
         
+        control.altaUsuario(usuAlta);
+        HttpSession misesion = request.getSession();
+        response.sendRedirect("index.jsp");
     }
 
     @Override
