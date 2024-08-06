@@ -24,6 +24,13 @@
         <h3>Haga click en el siguiente boton para ver los usuarios</h3>
         <form action="SVUsuarios" method="GET">
             <button type="submit">Mostrar usuarios</button>
-        </form>  
+        </form> 
+        
+        <p>Escribe el ID del usuario a eliminar</p>
+        <form action="SVEliminar" method="POST">
+            
+            <input  type="text" name="id_usuario">
+            
+        </form>
     </body>
 </html>
