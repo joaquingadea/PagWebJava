@@ -11,10 +11,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import logica.ControladoraL;
 
 @WebServlet(name = "SVEliminar", urlPatterns = {"/SVEliminar"})
 public class SVEliminar extends HttpServlet {
-
+    ControladoraL control = new ControladoraL();
+    HttpSession sesion;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -30,6 +33,10 @@ public class SVEliminar extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        int id = Integer.parseInt(request.getParameter("id_usuario"));
+        control.eliminarUsuario(id);
+        response.sendRedirect("index.jsp");
+        
     }
 
     @Override

@@ -30,7 +30,15 @@
         <form action="SVEliminar" method="POST">
             
             <input  type="text" name="id_usuario">
+            <button type="submit">
+                Eliminar
+            </button>
+        </form>
+        
+        <form action="SVEditar" method="">
             
         </form>
+        
+        
     </body>
 </html>

@@ -14,9 +14,10 @@
         List <Usuario> listaUs = (List) session.getAttribute("listaUsuarios");
         int cont = 1;
         for(Usuario usu : listaUs){%>
-        <label>Usuario nro <%=cont%>:</label> 
+        <label>Usuario nro <%=cont%>:</label><br>
+        <label>ID: </label><%=usu.getId()%><br>
         <label>Nombre: </label> <%=usu.getNombre()%><br>
-        <label>Apeliido: </label> <%=usu.getApellido()%><br>
+        <label>Apellido: </label> <%=usu.getApellido()%><br>
         <label>Edad: </label> <%=usu.getEdad()%><br>
         <br>
         <%cont = cont+1;
