@@ -16,5 +16,13 @@ ControladoraP controlP = new ControladoraP();
     public void eliminarUsuario(int id) {
         controlP.eliminarUsuario(id);
     }
+
+    public Usuario traerUsuario(int id) {
+        return controlP.traerUsuario(id);
+    }
+
+    public void editarUsuario(Usuario usuEd) {
+       controlP.editarUsuario(usuEd);
+    }
    
 }

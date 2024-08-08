@@ -23,5 +23,18 @@ UsuarioJpaController usuarioJpa = new UsuarioJpaController();
         Logger.getLogger(ControladoraP.class.getName()).log(Level.SEVERE, null, ex);
     }
     }
+
+    public Usuario traerUsuario(int id) {
+        return usuarioJpa.findUsuario(id);
+        
+    }
+
+    public void editarUsuario(Usuario usuEd) {
+    try {
+        usuarioJpa.edit(usuEd);
+    } catch (Exception ex) {
+        Logger.getLogger(ControladoraP.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    }
     
 }

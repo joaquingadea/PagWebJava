@@ -35,8 +35,9 @@
             </button>
         </form>
         
-        <form action="SVEditar" method="">
-            
+        <form action="SVEditar" method="GET">
+            <label>Pon el ID del usuario a editar: </label><input type="text" name="id_usuario">
+            <button type="submit">Enviar</button>
         </form>
         
         

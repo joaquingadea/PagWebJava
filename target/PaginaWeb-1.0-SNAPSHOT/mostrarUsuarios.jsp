@@ -10,8 +10,8 @@
     <body>
         <h1>Lista de usuarios registrados:</h1>
         
-        <%
-        List <Usuario> listaUs = (List) session.getAttribute("listaUsuarios");
+        <%HttpSession sesion = request.getSession();
+        List <Usuario> listaUs = (List) sesion.getAttribute("listaUsuarios");
         int cont = 1;
         for(Usuario usu : listaUs){%>
         <label>Usuario nro <%=cont%>:</label><br>
